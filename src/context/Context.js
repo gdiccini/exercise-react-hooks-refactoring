@@ -1,4 +1,3 @@
-
 import React, { createContext, useState } from 'react';
 
 const Context = createContext();
@@ -18,10 +17,12 @@ const CarsProvider = ({ children }) => {
   }
 
   const context = { cars, moveCar};
-
+  console.log(Context);
   return (
+
     <Context.Provider value={context}>
       {children}
+      {console.log(Context)}
     </Context.Provider>
   );
 };
